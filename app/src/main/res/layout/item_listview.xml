@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <!--android:="blocksDescendants"-->
+
+    <!--
+    解决Item控件抢占焦点的办法
+
+    方式一：
+    设置CheckBox的focusable属性
+    android:focusable="false"
+    防止CheckBox抢占ListView的焦点，使ListView不可点击
+
+    方式二：
+    设置item最外层布局RelativeLayout的descendantFocusability属性
+    android:descendantFocusability="blocksDescendants"
+    防止CheckBox抢占ListView的焦点，使ListView不可点击
+    -->
+    <CheckBox
+        android:focusable="false"
+        android:id="@+id/id_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        />
+
+    <TextView
+        android:id="@+id/id_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:singleLine="true"
+        android:text="Android新技能"
+        android:textColor="#444"/>
+
+    <TextView
+        android:id="@+id/id_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_title"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:minLines="1"
+        android:text="Android打造万能的ListView和GridView适配器"
+        android:textColor="#898989"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/id_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_description"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:minLines="1"
+        android:text="2014-12-12"
+        android:textColor="#898989"
+        android:textSize="12sp"/>
+    <TextView
+        android:id="@+id/id_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_description"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:minLines="1"
+        android:text="10086"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="5dp"
+        android:padding="3dp"
+        android:textColor="#fff"
+        android:background="#2ED667"
+        android:layout_alignParentRight="true"
+        android:textSize="14sp"/>
+
+
+
+
+
+
+</RelativeLayout>
