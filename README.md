@@ -1,0 +1,2 @@
+# ListViewCommonAdapter
+ListView的万能适配器
